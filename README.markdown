@@ -5,6 +5,9 @@ A simple way to network on iOS without a bunch of fuss.
 
 *PXLNetworking is a super simple class. If you need something more complex I strongly suggest using [AFNetworking](https://github.com/afnetworking/afnetworking).*
 
+## Documentation
+You can continue to read this to get a breif overview of PXLNetworking, or you can read the [documentation](http://cocoadocs.org/docsets/PXLNetworking/).
+
 ## Adding to Your Project
 Getting started using PXLNetworking is really easy! You can use Cocoapods or you can do it manually.
 
