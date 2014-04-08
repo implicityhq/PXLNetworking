@@ -65,4 +65,11 @@
  */
 @property (nonatomic) NSString *operationDescription;
 
+/**
+ Checks the response headers to see if content-type is JSON.
+ 
+ @return bool whether or not response is JSON. If the response headers have not been set yet than it is nil.
+ */
+- (BOOL)isJSONResponse;
+
 @end

@@ -27,4 +27,12 @@
 
 @implementation PXLHTTPOperation
 
+- (BOOL)isJSONResponse {
+	if (self.responseHeaders) {
+		NSArray *parts = [[self.responseHeaders objectForKey:@"Content-Type"] componentsSeparatedByString:@";"];
+		return [parts[0]  isEqualToString:@"application/json"];
+	}
+	return nil;
+}
+
 @end

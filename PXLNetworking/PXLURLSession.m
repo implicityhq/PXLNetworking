@@ -60,7 +60,7 @@
 		} else {
 			httpOperation.responseHeaders = [(NSHTTPURLResponse *)response allHeaderFields];
 			httpOperation.rawResponseData = data;
-			if ([self isJSONWithHeaders:httpOperation.responseHeaders]) {
+			if ([httpOperation isJSONResponse]) {
 				httpOperation.responseObject = (NSDictionary *)[NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
 			} else {
 				httpOperation.responseObject = data;
@@ -71,11 +71,6 @@
 		}
 	}];
 	[task resume];
-}
-
-- (BOOL)isJSONWithHeaders:(NSDictionary *)headers {
-	NSArray *parts = [[headers objectForKey:@"Content-Type"] componentsSeparatedByString:@";"];
-	return [parts[0]  isEqualToString:@"application/json"];
 }
 
 @end
