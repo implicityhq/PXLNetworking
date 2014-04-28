@@ -85,7 +85,7 @@ To send a `POST` HTTP request with headers and/or parameters do this:
 
 PXLHTTPClient *client = [PXLHTTPClient sharedClient];
 NSDictionary *headers = @{@"Content-Type" : @"application/json"};
-[client ANY:@"http://example.com/things.json" parameters:nil requestType:PXLHTTPRequestTypePOST headers:nil success:^(PXLHTTPOperation *response, id responseObject) {
+[client ANY:@"http://example.com/things.json" parameters:nil requestType:PXLHTTPRequestTypePOST headers:headers success:^(PXLHTTPOperation *response, id responseObject) {
 	NSLog(@"[Succcess] %@ %@", response.operationDescription, responseObject);
 } failure:^(PXLHTTPOperation *response, NSError *error) {
 	NSLog(@"[Error] %@", error);
