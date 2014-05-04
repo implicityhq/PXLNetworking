@@ -60,7 +60,7 @@
 			serialzedObject = [self serializeTextResponseObject:responseObject];
 			break;
 		default:
-			serialzedObject = nil;
+			serialzedObject = responseObject;
 			break;
 	}
 	return serialzedObject;

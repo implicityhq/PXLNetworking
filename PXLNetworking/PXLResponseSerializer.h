@@ -37,7 +37,29 @@ typedef enum {
 
 @interface PXLResponseSerializer : NSObject
 
+///---------------------------
+/// @name Serialization
+///---------------------------
+
+/**
+ Creates and returns a serialized PXLHTTPOperation object.
+ 
+ @param response The NSURLResponse returned by the request.
+ @param responseData The NSData returned by the request.
+ @param error The NSError, if any, returned by the request.
+ @return PXLHTTPOperation The serialized PXLHTTPOperation object.
+ */
 - (PXLHTTPOperation *)serialzeURLResponse:(NSURLResponse *)response responseData:(NSData *)responseData andError:(NSError *)error;
+
+/**
+ Serializes the response data returned by the request.
+ 
+ If the contentType is PXLResponseContentTypeJSON it returns an NSDictionary. If it is PXLResponseContentTypeTextPlain or PXLResponseContentTypeTextHtml then it returns a string. If it is PXLResponseContentTypeWildcard, it returns an id.
+ 
+ @param responseObject The NSData returned by the request.
+ @param contentType The PXLResponseContentType.
+ @return id The serialized data.
+ */
 - (id)serializeResponseObject:(NSData *)responseObject withContentType:(PXLResponseContentType)contentType;
 
 @end

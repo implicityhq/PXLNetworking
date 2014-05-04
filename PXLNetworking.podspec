@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
 	spec.name	= 'PXLNetworking'
-	spec.version	= '0.1.0'
+	spec.version	= '1.0.0'
 	spec.summary	= 'A simple way to network on iOS without a bunch of fuss.'
 	spec.homepage	= 'https://github.com/pxlsqre/pxlnetworking'
 	spec.author	= { 'Jason Silberman' => 'j@j99.co' }
@@ -13,5 +13,5 @@ Pod::Spec.new do |spec|
 	spec.platform	= :ios, '7.0'
 	spec.ios.deployment_target	= '7.0'
 
-	spec.source_files	= ['PXLNetworking/*.{h,m}', 'PXLNetworking/UIKit+PXLNetworking/*.{h,m}']
+	spec.source_files	= ['PXLNetworking/*.{h,m}', 'PXLNetworking/Foundation+PXLNetworking/*.{h,m}']
 end
