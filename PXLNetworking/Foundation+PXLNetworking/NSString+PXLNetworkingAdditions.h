@@ -1,5 +1,5 @@
 //
-//  PXLHTTPResponse.m
+//  NSString+PXLNetworkingAdditions.h
 //  PXLNetworking
 //
 // Copyright (c) 2014 Jason Silberman
@@ -23,8 +23,12 @@
 // SOFTWARE.
 //
 
-#import "PXLHTTPOperation.h"
+@import Foundation;
 
-@implementation PXLHTTPOperation
+inline __attribute__((always_inline)) NSString *pxl_safeString(NSString *str) { return str ? str : @""; }
+
+@interface NSString (PXLNetworkingAdditions)
+
+- (NSString *)stringByURLEncoding;
 
 @end

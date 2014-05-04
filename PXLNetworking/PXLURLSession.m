@@ -27,6 +27,7 @@
 
 #import "PXLActivityIndicator.h"
 #import "PXLHTTPOperation.h"
+#import "PXLResponseSerializer.h"
 
 @implementation PXLURLSession
 @synthesize urlSession = _urlSession;
@@ -52,22 +53,15 @@
 	[[PXLActivityIndicator sharedManager] increaseActivity];
 	NSURLSessionDataTask *task = [self.urlSession dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
 		[[PXLActivityIndicator sharedManager] decreaseActivity];
-		PXLHTTPOperation *httpOperation = [PXLHTTPOperation new];
+		
+		PXLResponseSerializer *responseSerializer = [PXLResponseSerializer new];
+		PXLHTTPOperation *httpOperation = [responseSerializer serialzeURLResponse:response responseData:data andError:error];
+		
 		httpOperation.URL = [request URL];
 		httpOperation.operationDescription = [NSString stringWithFormat:@"%@ %@", request.HTTPMethod, httpOperation.URL];
-		if (error) {
-			httpOperation.error = error;
-		} else {
-			httpOperation.responseHeaders = [(NSHTTPURLResponse *)response allHeaderFields];
-			httpOperation.rawResponseData = data;
-			if ([httpOperation isJSONResponse]) {
-				httpOperation.responseObject = (NSDictionary *)[NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
-			} else {
-				httpOperation.responseObject = data;
-			}
-		}
+		
 		if (completion) {
-			completion(httpOperation, httpOperation.responseObject, httpOperation.error);
+			completion(httpOperation, httpOperation.serializedResponseObject, httpOperation.error);
 		}
 	}];
 	[task resume];

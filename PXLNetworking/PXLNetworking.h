@@ -23,7 +23,7 @@
 // SOFTWARE.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 #ifndef _PXLNETWORKING_
 	#define _PXLNETWORKING_

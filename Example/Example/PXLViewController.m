@@ -38,13 +38,13 @@
 	[[PXLHTTPClient sharedClient] ANY:url parameters:params requestType:PXLHTTPRequestTypePOST headers:@{@"Content-Type" : @"application/json"} success:^(PXLHTTPOperation *response, id responseObject) {
 		NSLog(@"%@ %@", response.operationDescription, responseObject);
 	} failure:^(PXLHTTPOperation *response, NSError *error) {
-		NSLog(@"[%@] %@", response.description, error);
+		NSLog(@"[%@] %@", response.operationDescription, error);
 	}];
 	
 	[[PXLHTTPClient sharedClient] GET:url parameters:params success:^(PXLHTTPOperation *response, id responseObject) {
 		NSLog(@"%@ %@", response.operationDescription, responseObject);
 	} failure:^(PXLHTTPOperation *response, NSError *error) {
-		NSLog(@"%@", error);
+		NSLog(@"[%@] %@", response.operationDescription, error);
 	}];
 }
 

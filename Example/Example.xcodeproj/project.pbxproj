@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		96690DB91916C3B900B875B0 /* PXLResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 96690DB81916C3B900B875B0 /* PXLResponseSerializer.m */; };
+		96690DBF1916C43000B875B0 /* NSDictionary+PXLNetworkingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 96690DBC1916C43000B875B0 /* NSDictionary+PXLNetworkingAdditions.m */; };
+		96690DC01916C43000B875B0 /* NSString+PXLNetworkingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 96690DBE1916C43000B875B0 /* NSString+PXLNetworkingAdditions.m */; };
 		96786E2118E4C52B007036CB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96786E2018E4C52B007036CB /* Foundation.framework */; };
 		96786E2318E4C52B007036CB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96786E2218E4C52B007036CB /* CoreGraphics.framework */; };
 		96786E2518E4C52B007036CB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96786E2418E4C52B007036CB /* UIKit.framework */; };
@@ -22,8 +25,6 @@
 		96F3F8A218E65D37002E253B /* PXLHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F3F89618E65D37002E253B /* PXLHTTPClient.m */; };
 		96F3F8A318E65D37002E253B /* PXLHTTPOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F3F89818E65D37002E253B /* PXLHTTPOperation.m */; };
 		96F3F8A418E65D37002E253B /* PXLURLSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F3F89B18E65D37002E253B /* PXLURLSession.m */; };
-		96F3F8A518E65D37002E253B /* NSDictionary+PXLNetworkingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F3F89E18E65D37002E253B /* NSDictionary+PXLNetworkingAdditions.m */; };
-		96F3F8A618E65D37002E253B /* NSString+PXLNetworkingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F3F8A018E65D37002E253B /* NSString+PXLNetworkingAdditions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +38,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		96690DB71916C3B900B875B0 /* PXLResponseSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXLResponseSerializer.h; sourceTree = "<group>"; };
+		96690DB81916C3B900B875B0 /* PXLResponseSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXLResponseSerializer.m; sourceTree = "<group>"; };
+		96690DBB1916C43000B875B0 /* NSDictionary+PXLNetworkingAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+PXLNetworkingAdditions.h"; sourceTree = "<group>"; };
+		96690DBC1916C43000B875B0 /* NSDictionary+PXLNetworkingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+PXLNetworkingAdditions.m"; sourceTree = "<group>"; };
+		96690DBD1916C43000B875B0 /* NSString+PXLNetworkingAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+PXLNetworkingAdditions.h"; sourceTree = "<group>"; };
+		96690DBE1916C43000B875B0 /* NSString+PXLNetworkingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+PXLNetworkingAdditions.m"; sourceTree = "<group>"; };
 		96786E1D18E4C52B007036CB /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96786E2018E4C52B007036CB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		96786E2218E4C52B007036CB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -61,10 +68,6 @@
 		96F3F89918E65D37002E253B /* PXLNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXLNetworking.h; sourceTree = "<group>"; };
 		96F3F89A18E65D37002E253B /* PXLURLSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXLURLSession.h; sourceTree = "<group>"; };
 		96F3F89B18E65D37002E253B /* PXLURLSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXLURLSession.m; sourceTree = "<group>"; };
-		96F3F89D18E65D37002E253B /* NSDictionary+PXLNetworkingAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+PXLNetworkingAdditions.h"; sourceTree = "<group>"; };
-		96F3F89E18E65D37002E253B /* NSDictionary+PXLNetworkingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+PXLNetworkingAdditions.m"; sourceTree = "<group>"; };
-		96F3F89F18E65D37002E253B /* NSString+PXLNetworkingAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+PXLNetworkingAdditions.h"; sourceTree = "<group>"; };
-		96F3F8A018E65D37002E253B /* NSString+PXLNetworkingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+PXLNetworkingAdditions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +94,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		96690DBA1916C43000B875B0 /* Foundation+PXLNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				96690DBB1916C43000B875B0 /* NSDictionary+PXLNetworkingAdditions.h */,
+				96690DBC1916C43000B875B0 /* NSDictionary+PXLNetworkingAdditions.m */,
+				96690DBD1916C43000B875B0 /* NSString+PXLNetworkingAdditions.h */,
+				96690DBE1916C43000B875B0 /* NSString+PXLNetworkingAdditions.m */,
+			);
+			path = "Foundation+PXLNetworking";
+			sourceTree = "<group>";
+		};
 		96786E1418E4C52B007036CB = {
 			isa = PBXGroup;
 			children = (
@@ -155,23 +169,14 @@
 				96F3F89618E65D37002E253B /* PXLHTTPClient.m */,
 				96F3F89718E65D37002E253B /* PXLHTTPOperation.h */,
 				96F3F89818E65D37002E253B /* PXLHTTPOperation.m */,
+				96690DB71916C3B900B875B0 /* PXLResponseSerializer.h */,
+				96690DB81916C3B900B875B0 /* PXLResponseSerializer.m */,
 				96F3F89318E65D37002E253B /* PXLActivityIndicator.h */,
 				96F3F89418E65D37002E253B /* PXLActivityIndicator.m */,
-				96F3F89C18E65D37002E253B /* UIKit+PXLNetworking */,
+				96690DBA1916C43000B875B0 /* Foundation+PXLNetworking */,
 			);
 			name = PXLNetworking;
 			path = ../PXLNetworking;
-			sourceTree = "<group>";
-		};
-		96F3F89C18E65D37002E253B /* UIKit+PXLNetworking */ = {
-			isa = PBXGroup;
-			children = (
-				96F3F89D18E65D37002E253B /* NSDictionary+PXLNetworkingAdditions.h */,
-				96F3F89E18E65D37002E253B /* NSDictionary+PXLNetworkingAdditions.m */,
-				96F3F89F18E65D37002E253B /* NSString+PXLNetworkingAdditions.h */,
-				96F3F8A018E65D37002E253B /* NSString+PXLNetworkingAdditions.m */,
-			);
-			path = "UIKit+PXLNetworking";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,13 +273,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96690DC01916C43000B875B0 /* NSString+PXLNetworkingAdditions.m in Sources */,
+				96690DBF1916C43000B875B0 /* NSDictionary+PXLNetworkingAdditions.m in Sources */,
 				96F3F8A218E65D37002E253B /* PXLHTTPClient.m in Sources */,
 				96786E5E18E4C935007036CB /* PXLViewController.m in Sources */,
 				96F3F8A418E65D37002E253B /* PXLURLSession.m in Sources */,
-				96F3F8A618E65D37002E253B /* NSString+PXLNetworkingAdditions.m in Sources */,
 				96786E2D18E4C52B007036CB /* main.m in Sources */,
+				96690DB91916C3B900B875B0 /* PXLResponseSerializer.m in Sources */,
 				96786E3118E4C52B007036CB /* PXLAppDelegate.m in Sources */,
-				96F3F8A518E65D37002E253B /* NSDictionary+PXLNetworkingAdditions.m in Sources */,
 				96F3F8A318E65D37002E253B /* PXLHTTPOperation.m in Sources */,
 				96F3F8A118E65D37002E253B /* PXLActivityIndicator.m in Sources */,
 			);

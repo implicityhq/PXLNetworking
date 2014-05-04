@@ -23,7 +23,7 @@
 // SOFTWARE.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 @interface PXLHTTPOperation : NSObject
 
@@ -32,11 +32,9 @@
 ///-----------------
 
 /**
- The response object created by the request.
- 
- If the request returns `application/json`, it will be an NSDictionary.
+ The serialized response object.
  */
-@property (nonatomic) id responseObject;
+@property (nonatomic) id serializedResponseObject;
 
 /**
  The raw response data returned by the NSURLSessionDataTask.
@@ -64,12 +62,5 @@
  Example: GET http://example.com
  */
 @property (nonatomic) NSString *operationDescription;
-
-/**
- Checks the response headers to see if content-type is JSON.
- 
- @return bool whether or not response is JSON. If the response headers have not been set yet than it is nil.
- */
-- (BOOL)isJSONResponse;
 
 @end

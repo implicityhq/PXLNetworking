@@ -1,6 +1,6 @@
 //
-//  NSString+PXLNetworkingAdditions.h
-//  PXLNetworking
+//  PXLResponseSerializer.h
+//  Example
 //
 // Copyright (c) 2014 Jason Silberman
 //
@@ -23,12 +23,21 @@
 // SOFTWARE.
 //
 
-#import <Foundation/Foundation.h>
 
-inline __attribute__((always_inline)) NSString *pxl_safeString(NSString *str) { return str ? str : @""; }
+@import Foundation;
 
-@interface NSString (PXLNetworkingAdditions)
+@class PXLHTTPOperation;
 
-- (NSString *)stringByURLEncoding;
+typedef enum {
+	PXLResponseContentTypeJSON,
+	PXLResponseContentTypeTextPlain,
+	PXLResponseContentTypeTextHtml,
+	PXLResponseContentTypeWildcard
+} PXLResponseContentType;
+
+@interface PXLResponseSerializer : NSObject
+
+- (PXLHTTPOperation *)serialzeURLResponse:(NSURLResponse *)response responseData:(NSData *)responseData andError:(NSError *)error;
+- (id)serializeResponseObject:(NSData *)responseObject withContentType:(PXLResponseContentType)contentType;
 
 @end
