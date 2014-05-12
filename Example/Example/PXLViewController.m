@@ -35,7 +35,7 @@
 	
 	NSDictionary *params = @{@"name":@"Bob"};
 	
-	[[PXLHTTPClient sharedClient] ANY:url parameters:params requestType:PXLHTTPRequestTypePOST headers:@{@"Content-Type" : @"application/json"} success:^(PXLHTTPOperation *response, id responseObject) {
+	[[PXLHTTPClient sharedClient] ANY:url parameters:params requestType:PXLHTTPRequestTypePOST headers:nil success:^(PXLHTTPOperation *response, id responseObject) {
 		NSLog(@"%@ %@", response.operationDescription, responseObject);
 	} failure:^(PXLHTTPOperation *response, NSError *error) {
 		NSLog(@"[%@] %@", response.operationDescription, error);

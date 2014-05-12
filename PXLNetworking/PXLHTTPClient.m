@@ -113,6 +113,7 @@
 		if (parameters) {
 			NSData *postData = [NSJSONSerialization dataWithJSONObject:parameters options:0 error:nil];
 			[request setHTTPBody:postData];
+			[request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
 		}
 	}
 	
