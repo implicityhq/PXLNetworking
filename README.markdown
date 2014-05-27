@@ -67,7 +67,7 @@ PXLHTTPClient *client = [PXLHTTPClient sharedClient];
 }];
 ```
 
-#### `POST` URL-Form-Encoded Request
+#### `POST` JSON Encoded Request
 To send a `POST` HTTP request with parameters do this:
 
 ```objc
