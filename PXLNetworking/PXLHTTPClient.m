@@ -42,23 +42,23 @@
 }
 
 - (void)POST:(NSString *)URLString parameters:(NSDictionary *)parameters success:(void (^)(PXLHTTPOperation *response, id responseObject))success failure:(void (^)(PXLHTTPOperation *response, NSError *error))failure {
-	[self callRequestWithURLString:URLString requestType:PXLHTTPRequestTypePOST parameters:parameters headers:nil success:success failure:failure];
+	[self ANY:URLString parameters:parameters requestType:PXLHTTPRequestTypePOST headers:nil success:success failure:failure];
 }
 
 - (void)GET:(NSString *)URLString parameters:(NSDictionary *)parameters success:(void (^)(PXLHTTPOperation *response, id responseObject))success failure:(void (^)(PXLHTTPOperation *response, NSError *error))failure {
-	[self callRequestWithURLString:URLString requestType:PXLHTTPRequestTypeGET parameters:parameters headers:nil success:success failure:failure];
+	[self ANY:URLString parameters:parameters requestType:PXLHTTPRequestTypeGET headers:nil success:success failure:failure];
 }
 
 - (void)PUT:(NSString *)URLString parameters:(NSDictionary *)parameters success:(void (^)(PXLHTTPOperation *response, id responseObject))success failure:(void (^)(PXLHTTPOperation *response, NSError *error))failure {
-	[self callRequestWithURLString:URLString requestType:PXLHTTPRequestTypePUT parameters:parameters headers:nil success:success failure:failure];
+	[self ANY:URLString parameters:parameters requestType:PXLHTTPRequestTypePUT headers:nil success:success failure:failure];
 }
 
 - (void)PATCH:(NSString *)URLString parameters:(NSDictionary *)parameters success:(void (^)(PXLHTTPOperation *response, id responseObject))success failure:(void (^)(PXLHTTPOperation *response, NSError *error))failure {
-	[self callRequestWithURLString:URLString requestType:PXLHTTPRequestTypePATCH parameters:parameters headers:nil success:success failure:failure];
+	[self ANY:URLString parameters:parameters requestType:PXLHTTPRequestTypePATCH headers:nil success:success failure:failure];
 }
 
 - (void)DELETE:(NSString *)URLString parameters:(NSDictionary *)parameters success:(void (^)(PXLHTTPOperation *response, id responseObject))success failure:(void (^)(PXLHTTPOperation *response, NSError *error))failure {
-	[self callRequestWithURLString:URLString requestType:PXLHTTPRequestTypeDELETE parameters:parameters headers:nil success:success failure:failure];
+	[self ANY:URLString parameters:parameters requestType:PXLHTTPRequestTypeDELETE headers:nil success:success failure:failure];
 }
 
 - (void)ANY:(NSString *)URLString parameters:(NSDictionary *)parameters requestType:(PXLHTTPRequestType)requestType headers:(NSDictionary *)headers success:(void (^)(PXLHTTPOperation *response, id responseObject))success failure:(void (^)(PXLHTTPOperation *response, NSError *error))failure {
@@ -124,17 +124,7 @@
 		}
 	}
 	
-	[self createHTTPRequest:request withCompletion:^(PXLHTTPOperation *response, id responseObject, NSError *error) {
-		if (! error) {
-			if (success) {
-				success(response, responseObject);
-			}
-		} else {
-			if (failure) {
-				failure(response, error);
-			}
-		}
-	}];
+	[self sendHTTPRequest:request success:success failure:failure];
 }
 
 - (void)createHTTPRequest:(NSURLRequest *)request withCompletion:(void (^)(PXLHTTPOperation *response, id responseObject, NSError *error))completion {
