@@ -16,9 +16,6 @@
 		96786E2B18E4C52B007036CB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 96786E2918E4C52B007036CB /* InfoPlist.strings */; };
 		96786E2D18E4C52B007036CB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 96786E2C18E4C52B007036CB /* main.m */; };
 		96786E3118E4C52B007036CB /* PXLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 96786E3018E4C52B007036CB /* PXLAppDelegate.m */; };
-		96786E3A18E4C52B007036CB /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96786E3918E4C52B007036CB /* XCTest.framework */; };
-		96786E3B18E4C52B007036CB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96786E2018E4C52B007036CB /* Foundation.framework */; };
-		96786E3C18E4C52B007036CB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96786E2418E4C52B007036CB /* UIKit.framework */; };
 		96786E5E18E4C935007036CB /* PXLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96786E5D18E4C935007036CB /* PXLViewController.m */; };
 		96786E6218E4CAB5007036CB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96786E6118E4CAB5007036CB /* Images.xcassets */; };
 		96F3F8A118E65D37002E253B /* PXLActivityIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F3F89418E65D37002E253B /* PXLActivityIndicator.m */; };
@@ -26,16 +23,6 @@
 		96F3F8A318E65D37002E253B /* PXLHTTPOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F3F89818E65D37002E253B /* PXLHTTPOperation.m */; };
 		96F3F8A418E65D37002E253B /* PXLURLSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F3F89B18E65D37002E253B /* PXLURLSession.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		96786E3D18E4C52B007036CB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 96786E1518E4C52B007036CB /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 96786E1C18E4C52B007036CB;
-			remoteInfo = Example;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		96690DB71916C3B900B875B0 /* PXLResponseSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXLResponseSerializer.h; sourceTree = "<group>"; };
@@ -54,7 +41,6 @@
 		96786E2E18E4C52B007036CB /* Example-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Example-Prefix.pch"; sourceTree = "<group>"; };
 		96786E2F18E4C52B007036CB /* PXLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PXLAppDelegate.h; sourceTree = "<group>"; };
 		96786E3018E4C52B007036CB /* PXLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PXLAppDelegate.m; sourceTree = "<group>"; };
-		96786E3818E4C52B007036CB /* ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		96786E3918E4C52B007036CB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		96786E5C18E4C935007036CB /* PXLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXLViewController.h; sourceTree = "<group>"; };
 		96786E5D18E4C935007036CB /* PXLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXLViewController.m; sourceTree = "<group>"; };
@@ -78,16 +64,6 @@
 				96786E2318E4C52B007036CB /* CoreGraphics.framework in Frameworks */,
 				96786E2518E4C52B007036CB /* UIKit.framework in Frameworks */,
 				96786E2118E4C52B007036CB /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		96786E3518E4C52B007036CB /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				96786E3A18E4C52B007036CB /* XCTest.framework in Frameworks */,
-				96786E3C18E4C52B007036CB /* UIKit.framework in Frameworks */,
-				96786E3B18E4C52B007036CB /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,7 +95,6 @@
 			isa = PBXGroup;
 			children = (
 				96786E1D18E4C52B007036CB /* Example.app */,
-				96786E3818E4C52B007036CB /* ExampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -199,24 +174,6 @@
 			productReference = 96786E1D18E4C52B007036CB /* Example.app */;
 			productType = "com.apple.product-type.application";
 		};
-		96786E3718E4C52B007036CB /* ExampleTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 96786E4C18E4C52B007036CB /* Build configuration list for PBXNativeTarget "ExampleTests" */;
-			buildPhases = (
-				96786E3418E4C52B007036CB /* Sources */,
-				96786E3518E4C52B007036CB /* Frameworks */,
-				96786E3618E4C52B007036CB /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				96786E3E18E4C52B007036CB /* PBXTargetDependency */,
-			);
-			name = ExampleTests;
-			productName = ExampleTests;
-			productReference = 96786E3818E4C52B007036CB /* ExampleTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -225,11 +182,6 @@
 			attributes = {
 				CLASSPREFIX = PXL;
 				LastUpgradeCheck = 0510;
-				TargetAttributes = {
-					96786E3718E4C52B007036CB = {
-						TestTargetID = 96786E1C18E4C52B007036CB;
-					};
-				};
 			};
 			buildConfigurationList = 96786E1818E4C52B007036CB /* Build configuration list for PBXProject "Example" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -244,7 +196,6 @@
 			projectRoot = "";
 			targets = (
 				96786E1C18E4C52B007036CB /* Example */,
-				96786E3718E4C52B007036CB /* ExampleTests */,
 			);
 		};
 /* End PBXProject section */
@@ -256,13 +207,6 @@
 			files = (
 				96786E2B18E4C52B007036CB /* InfoPlist.strings in Resources */,
 				96786E6218E4CAB5007036CB /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		96786E3618E4C52B007036CB /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,22 +230,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		96786E3418E4C52B007036CB /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		96786E3E18E4C52B007036CB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 96786E1C18E4C52B007036CB /* Example */;
-			targetProxy = 96786E3D18E4C52B007036CB /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		96786E2918E4C52B007036CB /* InfoPlist.strings */ = {
@@ -415,46 +344,6 @@
 			};
 			name = Release;
 		};
-		96786E4D18E4C52B007036CB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Example.app/Example";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Example/Example-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "ExampleTests/ExampleTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		96786E4E18E4C52B007036CB /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Example.app/Example";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Example/Example-Prefix.pch";
-				INFOPLIST_FILE = "ExampleTests/ExampleTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -472,15 +361,6 @@
 			buildConfigurations = (
 				96786E4A18E4C52B007036CB /* Debug */,
 				96786E4B18E4C52B007036CB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		96786E4C18E4C52B007036CB /* Build configuration list for PBXNativeTarget "ExampleTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				96786E4D18E4C52B007036CB /* Debug */,
-				96786E4E18E4C52B007036CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

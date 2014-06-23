@@ -32,7 +32,7 @@
     NSMutableArray *pairs = [NSMutableArray array];
     for (NSString *key in [self keyEnumerator]) {
         id value = [self objectForKey:key];
-        NSString *escapedValue = [value stringByURLEncoding];
+        NSString *escapedValue = [value isKindOfClass:[NSString class]] ? [value stringByURLEncoding] : value;
         [pairs addObject:[NSString stringWithFormat:@"%@=%@", key, escapedValue]];
     }
 	

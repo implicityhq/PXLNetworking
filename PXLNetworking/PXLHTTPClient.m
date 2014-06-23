@@ -111,9 +111,7 @@
 	} else {
 		[request setURL:[NSURL URLWithString:URLString]];
 		if (parameters) {
-			NSData *postData = [NSJSONSerialization dataWithJSONObject:parameters options:0 error:nil];
-			[request setHTTPBody:postData];
-			[request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+			[request setHTTPBody:[[parameters queryStringValue] dataUsingEncoding:NSUTF8StringEncoding]];
 		}
 	}
 	

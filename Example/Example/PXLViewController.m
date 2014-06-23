@@ -33,7 +33,7 @@
 	
 	static NSString *url = @"http://httpTests.dev";
 	
-	NSDictionary *params = @{@"name":@"Bob"};
+	NSDictionary *params = @{@"name":@"Bob", @"age" : @15};
 	
 	[[PXLHTTPClient sharedClient] ANY:url parameters:params requestType:PXLHTTPRequestTypePOST headers:nil success:^(PXLHTTPOperation *response, id responseObject) {
 		NSLog(@"%@ %@", response.operationDescription, responseObject);
