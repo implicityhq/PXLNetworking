@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
 	spec.name	= 'PXLNetworking'
-	spec.version	= '1.0.1'
+	spec.version	= '1.0.2'
 	spec.summary	= 'A simple way to network on iOS without a bunch of fuss.'
 	spec.homepage	= 'https://github.com/pxlsqre/pxlnetworking'
 	spec.author	= { 'Jason Silberman' => 'j@j99.co' }
