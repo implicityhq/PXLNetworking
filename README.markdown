@@ -127,7 +127,7 @@ PXLHTTPOperation employs the following properties:
 ```
 
 ### PXLActivityIndicator
-PXLNetworking also comes with a network activity indicator. You should enable the shared instance of `PXLActivityIndicator` in your `AppDelegate application:didFinishLaunchingWithOptions` by doing this:
+PXLNetworking also comes with a network activity indicator. You should enable the shared instance of `PXLActivityIndicator` in your `-[AppDelegate application:didFinishLaunchingWithOptions:]` by doing this:
 
 ```objc
 
